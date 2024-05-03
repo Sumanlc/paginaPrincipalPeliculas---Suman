@@ -1,0 +1,178 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 20;
+    padding: 20;
+    box-sizing: border-box;
+}
+
+
+
+/* HEADER */
+
+header {
+   /* background-color: #3498db;*/
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    /*height: 25vh; /* Establece la altura del header que contiene el reel */
+}
+
+
+/* REEL DE FOTOS */
+
+
+#reelFotos {
+    display: flex;
+    overflow: hidden; /* Si alguna imagen desborda, la oculta */
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    /*opacity: 0.7; /* Ajusta la opacidad para la transparencia */
+}
+
+
+/* Aplica la animación al carrusel */
+
+
+#reelFotos img {
+    height: 200px;
+    width: 230px; 
+    transition: transform 1s ease-in-out; /* se usa pata transicion suave*/
+    display: inline-block; 
+    margin-right: 150px;
+    animation: moveLeft  25s linear infinite; /* se necesitan    15s a 3s para que se mueva cada 3 segundos */
+}
+
+
+
+/* ANIMACIÓN DEL CARRUSEL */
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform:translateX(calc(-100% - 3240px)); /* con esto se mueven las imagenes a la izquierda */
+    }
+}
+
+
+/* Detiene la animación al pasar el mouse */
+#reelFotos:hover img {
+    animation-play-state: paused;
+}
+
+
+
+
+
+
+
+/* MAIN */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+/* ASIDE IZQUIERDO */
+aside.izquierdo {
+    width: 25%;
+    height: 85%;
+    border: 2px solid #e74c3c; 
+    padding: 10px;
+}
+
+/* ARTICLE */
+article {
+    width: 50%;
+    border: 2px solid #2ecc71; 
+    padding: 10px;
+    text-align: center;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ASIDE DERECHO */
+aside.derecho {
+    width: 25%;
+    border: 2px solid #f39c12; 
+    padding: 10px;
+}
+
+#miniatura1 {
+    
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+#miniatura2{
+    width: 100%;
+    overflow: hidden;
+
+}
+#miniatura3{
+    width: 100%;
+    overflow: hidden;
+
+}
+
+
+
+iframe {
+    
+    width: 100%;
+    height: 130%;
+}
+
+
+/* FOOTER */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECCIONES EN ASIDE IZQUIERDO Y DERECHO */
+aside section {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ecf0f1; /* Gris claro */
+}
+
+/* FORMULARIO (ESTRUCTURA BÁSICA) */
+#formulario {
+    /* Agrega estilos según tus necesidades */
+}
+
+/* CONTADOR */
+#contador {
+    /* Agrega estilos según tus necesidades */
+}
